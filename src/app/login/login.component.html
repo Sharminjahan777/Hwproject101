@@ -1,0 +1,11 @@
+<div *ngIf="isAuthenticated; else homeView">
+  User is Authenticated  
+</div>
+
+<ng-template #homeView>
+<h3>Welcome to the Homepage</h3>
+</ng-template>
+
+<ul *ngFor="let car of cars; let i=index">
+  <li>{{car}}</li>
+</ul>
